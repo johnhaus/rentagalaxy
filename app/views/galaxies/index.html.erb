@@ -1,1 +1,9 @@
 <h1>All Galaxies</h1>
+<div>
+  <% @galaxy.each do |g| %>
+    <div>
+      <h4><%= g.name %></h4>
+      <p><%= g.description %></p>
+    </div>
+  <% end %>
+</div>
