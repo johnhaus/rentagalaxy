@@ -5,35 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 
 puts 'Cleaning database...'
 Galaxy.destroy_all
 
 puts 'Creating galaxies...'
-galaxy_1 = Galaxy.new(name: "First", description: "First Galaxy")
-galaxy_1.save!
+9.times do
+  galaxy = Galaxy.new(
+  name: Faker::Space.unique.galaxy,
+  description: Faker::Lorem.paragraph(sentence_count: 3),
+  price: Faker::Number.within(range: 10000..100000),
+  owner: Faker::Internet.unique.username
+  )
+  galaxy.save!
+end
 
-galaxy_2 = Galaxy.new(name: "Second", description: "Second Galaxy")
-galaxy_2.save!
-
-galaxy_3 = Galaxy.new(name: "Third", description: "Third Galaxy")
-galaxy_3.save!
-
-galaxy_4 = Galaxy.new(name: "Fourth", description: "Fourth Galaxy")
-galaxy_4.save!
-
-galaxy_5 = Galaxy.new(name: "Fifth", description: "Fifth Galaxy")
-galaxy_5.save!
-
-galaxy_6 = Galaxy.new(name: "Sixth", description: "Sixth Galaxy")
-galaxy_6.save!
-
-galaxy_7 = Galaxy.new(name: "Seventh", description: "Seventh Galaxy")
-galaxy_7.save!
-
-galaxy_8 = Galaxy.new(name: "Eighth", description: "Eighth Galaxy")
-galaxy_8.save!
-
-galaxy_9 = Galaxy.new(name: "Ninth", description: "Ninth Galaxy")
-galaxy_9.save!
 puts 'Finished!'
+
