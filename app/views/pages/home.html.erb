@@ -1,2 +1,7 @@
-<h1>Rent a Galaxy!!</h1>
-<p>That's right, you can now rent your very own galaxy</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "galaxybanner.jpg" %>');">
+  <div class="container">
+    <h1>Rent a Galaxy!!</h1>
+    <p>That's right, you can now rent your very own galaxy</p>
+    <%= link_to "See Galaxies", galaxies_path, class: "btn btn-ghost" %>
+  </div>
+</div>
