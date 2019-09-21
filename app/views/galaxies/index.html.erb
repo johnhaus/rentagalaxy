@@ -6,12 +6,15 @@
 
 <!-- Portfolio Gallery Grid -->
 <div class="row">
-  <% @galaxy.each do |g| %>
+  <% @galaxies.each do |g| %>
     <div class="column">
       <div class="content">
         <%= image_tag('homegalaxy.jpeg', style:"width:100%") %>
         <h4><%= g.name %></h4>
-        <p><%= g.description %></p>
+        <p><%= truncate(g.description, length: 50, separator: ' ') %></p>
+        <p>Price $ <%= g.price %></p>
+        <p>Owner: <%= g.owner %></p>
+        <%= link_to "See More", galaxy_path(g), class: "btn btn-ghost" %>
       </div>
     </div>
   <% end %>
