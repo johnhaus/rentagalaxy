@@ -40,8 +40,10 @@ h1 {
 
 /* Content */
 .content {
-  background-color: white;
+  background-color: #5d5d5d;
   padding: 10px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 6px black;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */

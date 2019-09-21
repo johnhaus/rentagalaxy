@@ -1,7 +1,7 @@
 class GalaxiesController < ApplicationController
 
   def index
-    @galaxy = Galaxy.all
+    @galaxies = Galaxy.all
   end
 
   def show
