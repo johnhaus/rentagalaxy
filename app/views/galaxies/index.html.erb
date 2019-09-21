@@ -1,9 +1,21 @@
+ <!-- MAIN (Center website) -->
+<div class="main">
+
 <h1>All Galaxies</h1>
-<div>
+<hr>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
   <% @galaxy.each do |g| %>
-    <div>
-      <h4><%= g.name %></h4>
-      <p><%= g.description %></p>
+    <div class="column">
+      <div class="content">
+        <%= image_tag('homegalaxy.jpeg', style:"width:100%") %>
+        <h4><%= g.name %></h4>
+        <p><%= g.description %></p>
+      </div>
     </div>
   <% end %>
+</div>
+
+<!-- END MAIN -->
 </div>
