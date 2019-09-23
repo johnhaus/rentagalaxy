@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   # get 'galaxies/:id', to: 'galaxies#show'
 
   resources :galaxies, only: [ :index, :show ] do
-    resources :rents, only: [ :index, :new, :create ]
+    resources :rents, only: [ :new, :create ]
   end
-  resources :rents, only: [ :show, :edit, :update, :destroy ]
+  resources :rents, only: [ :index, :show, :edit, :update, :destroy ]
 
 end
