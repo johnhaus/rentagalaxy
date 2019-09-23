@@ -1,5 +1,5 @@
 body {
-  background-color: #f1f1f1;
+  background-color: black;
   font-family: Arial;
 }
 
@@ -13,6 +13,21 @@ body {
 h1 {
   font-size: 50px;
   word-break: break-all;
+  color: white;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  font-size: 24px;
+  color: white;
+}
+
+p {
+  color: white;
+  opacity: .7;
 }
 
 .row {
@@ -40,7 +55,7 @@ h1 {
 
 /* Content */
 .content {
-  background-color: #5d5d5d;
+  background-color: black;
   padding: 10px;
   border-radius: 3px;
   box-shadow: 3px 3px 6px black;
