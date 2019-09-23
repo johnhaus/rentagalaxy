@@ -15,16 +15,21 @@
   width: 40px;
   border-radius: 50%;
   border: 1px solid white;
+  opacity: .7;
+  transition: opacity 0.3s ease;
+   &:hover {
+    opacity: 1;
+  }
 }
 
 .navbar-light .navbar-nav .nav-link {
   color: white;
-  opacity: .8;
-}
-
-.navbar-light .navbar-nav .nav-link:hover {
-  color: white;
-  opacity: 1;
+  opacity: .7;
+  transition: opacity 0.3s ease;
+  &:hover {
+    color: white;
+    opacity: 1;
+  }
 }
 
 #navbarDropdown {
