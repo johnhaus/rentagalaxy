@@ -1,11 +1,17 @@
-<h2>Rent this Galaxy</h2>
+<h2>Rent this Galaxy: <%= @galaxy.name %></h2>
+
+<%= image_tag('homegalaxy.jpeg', style:"width: 100%; max-width:500px") %>
+
+<p><%= @galaxy.description %></p>
+<p>Price Per Day $ <%= @galaxy.price %></p>
+<p>Owner: <%= @galaxy.owner %></p>
 
 <%= form_for([@galaxy, @rent], method: :post) do |f| %>
-  <%= f.label :start_date %>
+  <%= f.label :start_date, class: "label" %>
   <%= f.date_field :start_date %>
 
-  <%= f.label :end_date %>
+  <%= f.label :end_date, class: "label" %>
   <%= f.date_field :end_date %>
 
-  <%= f.submit %>
+  <%= f.submit class: "btn btn-ghost" %>
 <% end %>
