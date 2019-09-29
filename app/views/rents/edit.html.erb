@@ -1,19 +1,25 @@
-<h2>Update your rental for: <%= @rent.galaxy.name %></h2>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-3">
+      <h2>Update your rental for: <%= @rent.galaxy.name %></h2>
 
-<%= image_tag('homegalaxy.jpeg', style:"width: 100%; max-width:500px") %>
+      <%= image_tag('homegalaxy.jpeg', style:"width: 100%; max-width:500px") %>
 
-<p><%= @rent.galaxy.description %></p>
-<p>Price Per Day $ <%= @rent.galaxy.price %></p>
-<p>Owner: <%= @rent.galaxy.owner %></p>
+      <p><%= @rent.galaxy.description %></p>
+      <p>Price Per Day $ <%= @rent.galaxy.price %></p>
+      <p>Owner: <%= @rent.galaxy.owner %></p>
 
-<%= form_for(@rent, method: :patch) do |f| %>
-  <%= f.label :start_date, class: "label" %>
-  <%= f.date_field :start_date %>
+      <%= form_for(@rent, method: :patch) do |f| %>
+        <%= f.label :start_date, class: "label" %>
+        <%= f.date_field :start_date %>
 
-  <%= f.label :end_date, class: "label" %>
-  <%= f.date_field :end_date %>
+        <%= f.label :end_date, class: "label" %>
+        <%= f.date_field :end_date %>
 
-  <%= f.submit class: "btn btn-ghost" %>
-<% end %>
+        <%= f.submit class: "btn btn-ghost" %>
+      <% end %>
 
-<%= link_to "Cancel Rental", rent_path(@rent), method: :delete, class: "btn btn-ghost" %>
+      <%= link_to "Cancel Rental", rent_path(@rent), method: :delete, class: "btn btn-ghost" %>
+    </div>
+  </div>
+</div>
