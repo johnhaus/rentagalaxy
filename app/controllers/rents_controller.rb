@@ -1,5 +1,5 @@
 class RentsController < ApplicationController
-  before_action :set_rent, only: [:show, :edit, :update]
+  before_action :set_rent, only: [:show, :edit, :update, :destroy]
 
   def index
     @rents = Rent.all
@@ -36,6 +36,11 @@ class RentsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @rent.destroy
+    redirect_to rents_url, notice: 'Your rental has been cancelled.'
   end
 
   private
