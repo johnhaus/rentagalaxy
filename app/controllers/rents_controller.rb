@@ -1,4 +1,5 @@
 class RentsController < ApplicationController
+  before_action :set_rent, only: [:show, :edit, :update]
 
   def index
     @rents = Rent.all
@@ -26,6 +27,16 @@ class RentsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @rent.update(rent_params)
+      redirect_to @rent, notice: 'Rental was successfully updated.'
+    else
+      render :edit
+    end
+  end
 
   private
 
@@ -33,4 +44,7 @@ class RentsController < ApplicationController
     params.require(:rent).permit(:start_date, :end_date)
   end
 
+  def set_rent
+    @rent = Rent.find(params[:id])
+  end
 end
