@@ -5,4 +5,5 @@
   <p>Galaxy: <%= rent.galaxy_id %></p>
   <p>Start Date: <%= rent.start_date %></p>
   <p>End Date: <%= rent.end_date %></p>
+  <%= link_to "Edit", edit_rent_path(rent), class: "btn btn-ghost" %>
 <% end %>
