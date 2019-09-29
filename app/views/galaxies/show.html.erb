@@ -5,6 +5,6 @@
   <%= image_tag('homegalaxy.jpeg', style:"width: 100%; max-width:500px") %>
   <p>Price $ <%= @galaxy.price %></p>
   <p>Owner: <%= @galaxy.owner %></p>
-  <%= link_to "Back", galaxies_path, class: "btn btn-ghost" %>
+  <%= link_to "Back", :back, class: "btn btn-ghost" %>
   <%= link_to "Rent", new_galaxy_rent_path(@galaxy), class: "btn btn-ghost" %>
 </div>
