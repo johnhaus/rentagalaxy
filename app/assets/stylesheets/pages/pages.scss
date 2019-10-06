@@ -23,3 +23,11 @@
 .form-inputs {
   color: white;
 }
+
+.conditions {
+  padding-top: 100px;
+  margin-bottom: -140px;
+  & p {
+    font-size: 12px;
+  }
+}
