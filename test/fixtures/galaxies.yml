@@ -1,0 +1,27 @@
+# can do the manual way.................
+
+# milky_way:
+#   name: "Milky Way"
+#   description: "Laboriosam deleniti velit."
+#   price: "68071"
+#   owner: "clemente_oconner"
+# blackeye:
+#   name: "Blackeye"
+#   description: "Tempore voluptates adipisci."
+#   price: "50930"
+#   owner: "lashawnda.hand"
+# pinwheel:
+#   name: "Pinwheel"
+#   description: "Ratione suscipit similique."
+#   price: "21123"
+#   owner: "willian"
+
+# or automated......................
+
+<% 8.times do |i| %>
+galaxy_<%= i %>:
+  name: <%= Faker::Space.unique.galaxy %>
+  description: <%= Faker::Lorem.paragraph(sentence_count: 3) %>
+  price: <%= Faker::Number.within(range: 10000..100000) %>
+  owner: <%= Faker::Internet.unique.username %>
+<% end %>
