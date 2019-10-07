@@ -28,7 +28,10 @@
 
 .navbar-light .navbar-nav .nav-link {
   color: white;
+  width: 150px;
+  margin-right: 5px;
   opacity: .7;
+  float: right;
   transition: opacity 0.3s ease;
   &:hover {
     color: white;
@@ -40,4 +43,23 @@
   padding: 13px;
   border-radius: 50%;
   border: 1px solid white;
+  width: 45px;
+
+}
+
+.navbar-toggler {
+  background: white;
+  opacity: .7;
+}
+
+.dropdown-menu-right {
+  background: lightgray;
+  opacity: 1;
+  width: 200px;
+  float: right;
+}
+
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  right: 10px;
 }
