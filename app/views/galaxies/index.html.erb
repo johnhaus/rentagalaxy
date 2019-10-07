@@ -14,7 +14,7 @@
         <p><%= truncate(g.description, length: 50, separator: ' ') %></p>
         <p>Price $ <%= g.price %></p>
         <p>Owner: <%= g.owner %></p>
-        <%= link_to "See More", galaxy_path(g), class: "btn btn-ghost" %>
+        <%= link_to "Details", galaxy_path(g), class: "btn btn-ghost" %>
         <%= link_to "Rent", new_galaxy_rent_path(g), class: "btn btn-ghost" %>
       </div>
     </div>
