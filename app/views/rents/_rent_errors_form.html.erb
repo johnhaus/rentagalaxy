@@ -1,0 +1,13 @@
+<% if @rent.errors.any? %>
+  <div id="error_explanation">
+    <h3>
+      <%= pluralize(@rent.errors.count, "error") %>
+      prohibited this rent from being saved:
+    </h3>
+    <ul>
+    <% @rent.errors.full_messages.each do |msg| %>
+      <li> <p><%= msg %></p> </li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
