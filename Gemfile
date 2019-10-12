@@ -9,6 +9,7 @@ gem 'rails', '5.2.3'
 gem 'redis'
 gem 'devise'
 gem "faker"
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
