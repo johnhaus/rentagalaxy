@@ -9,7 +9,7 @@
   <% @galaxies.each do |g| %>
     <div class="column">
       <div class="content">
-        <%= image_tag('homegalaxy.jpeg', style:"width:100%") %>
+        <%= image_tag('homegalaxy.jpg', style:"width:100%") %>
         <h3><%= g.name %></h3>
         <p><%= truncate(g.description, length: 50, separator: ' ') %></p>
         <p>Price $ <%= g.price %></p>
