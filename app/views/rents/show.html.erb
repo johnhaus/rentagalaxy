@@ -1,13 +1,19 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-3">
-      <h2>Details for your rental</h2>
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6">
+      <h2>Details for your rental for: <%= @rent.galaxy.name %></h2>
 
-      <p>Galaxy Rented: <%= @rent.galaxy.name %></p>
-      <p>Galaxy ID: <%= @rent.galaxy.id %></p>
-      <p>User: <%= @rent.user_id %></p>
-      <p>Start Date: <%= @rent.start_date %></p>
-      <p>End Date: <%= @rent.end_date %></p>
+      <%= image_tag('homegalaxy.jpeg', style:"width: 100%; max-width:500px") %>
+
+      <p><%= @rent.galaxy.description %></p>
+      <p>Price Per Day $ <%= @rent.galaxy.price %></p>
+      <p>Owner: <%= @rent.galaxy.owner %></p>
+
+      <p>Start Date: <%= @rent.start_date.strftime("%b %d, %Y") %></p>
+      <p>End Date: <%= @rent.end_date.strftime("%b %d, %Y") %></p>
+
+      <%= link_to "Back", :back, class: "btn btn-ghost" %>
+      <%= link_to "Edit", edit_rent_path(@rent), class: "btn btn-ghost" %>
     </div>
   </div>
 </div>
