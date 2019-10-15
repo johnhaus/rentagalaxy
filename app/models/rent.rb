@@ -20,8 +20,10 @@ class Rent < ApplicationRecord
   end
 
   def rent_too_long
+    return if end_date.blank? || start_date.blank?
+
     if end_date > start_date + 30.days
-      errors.add(:end_date, "is too great. You can only rent for 30 days at a time.")
+      errors.add(:end_date, "must be less than 31 days from start date.")
 
     end
   end
