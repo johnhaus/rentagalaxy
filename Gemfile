@@ -8,6 +8,7 @@ gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
 gem 'devise'
+gem 'pundit'
 gem "faker"
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
