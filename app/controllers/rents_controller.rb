@@ -2,16 +2,16 @@ class RentsController < ApplicationController
   before_action :set_rent, only: [:show, :edit, :update, :destroy]
 
   def index
-    @rents = Rent.all
+    @rents = policy_scope(Rent)
   end
 
   def show
-    @rent = Rent.find(params[:id])
   end
 
   def new
     @galaxy = Galaxy.find_by(id: params[:galaxy_id])
     @rent = Rent.new
+    authorize @rent
   end
 
   def create
@@ -19,6 +19,7 @@ class RentsController < ApplicationController
     @galaxy = Galaxy.find(params[:galaxy_id])
     @rent.user = current_user
     @rent.galaxy = @galaxy
+    authorize @rent
 
     if @rent.save
       redirect_to @rent
@@ -51,5 +52,6 @@ class RentsController < ApplicationController
 
   def set_rent
     @rent = Rent.find(params[:id])
+    authorize @rent
   end
 end
