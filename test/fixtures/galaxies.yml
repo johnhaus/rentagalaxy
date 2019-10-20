@@ -1,27 +1,47 @@
 # can do the manual way.................
 
-# milky_way:
-#   name: "Milky Way"
-#   description: "Laboriosam deleniti velit."
-#   price: "68071"
-#   owner: "clemente_oconner"
-# blackeye:
-#   name: "Blackeye"
-#   description: "Tempore voluptates adipisci."
-#   price: "50930"
-#   owner: "lashawnda.hand"
-# pinwheel:
-#   name: "Pinwheel"
-#   description: "Ratione suscipit similique."
-#   price: "21123"
-#   owner: "willian"
+milky_way:
+  name: "Milky Way"
+  description: "Laboriosam deleniti velit."
+  price: "68071"
+  owner: "clemente_oconner"
+blackeye:
+  name: "Blackeye"
+  description: "Tempore voluptates adipisci."
+  price: "50930"
+  owner: "lashawnda.hand"
+pinwheel:
+  name: "Pinwheel"
+  description: "Ratione suscipit similique."
+  price: "21123"
+  owner: "willian"
+hoags_object:
+  name: "Hoags Object"
+  description: "Temporibus veritatis cum."
+  price: "87549"
+  owner: "byron"
+messier_83:
+  name: "Messier 83"
+  description: "Sapiente libero aut."
+  price: "92018"
+  owner: "ethyl"
+andromeda:
+  name: "Andromeda"
+  description: "Quidem ipsam mollitia."
+  price: "21423"
+  owner: "emmett"
+whirlpool:
+  name: "Whirlpool"
+  description: "Nisi ut est."
+  price: "67321"
+  owner: "tommy"
 
 # or automated......................
 
-<% 8.times do |i| %>
-galaxy_<%= i %>:
-  name: <%= Faker::Space.unique.galaxy %>
-  description: <%= Faker::Lorem.paragraph(sentence_count: 3) %>
-  price: <%= Faker::Number.within(range: 10000..100000) %>
-  owner: <%= Faker::Internet.unique.username %>
-<% end %>
+# <% 8.times do |i| %>
+# galaxy_<%= i %>:
+#   name: <%= Faker::Space.unique.galaxy %>
+#   description: <%= Faker::Lorem.paragraph(sentence_count: 3) %>
+#   price: <%= Faker::Number.within(range: 10000..100000) %>
+#   owner: <%= Faker::Internet.unique.username %>
+# <% end %>
