@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_22_212417) do
+ActiveRecord::Schema.define(version: 2019_10_22_113434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2019_09_22_212417) do
     t.datetime "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "total_days"
+    t.integer "total_price"
     t.index ["galaxy_id"], name: "index_rents_on_galaxy_id"
     t.index ["user_id"], name: "index_rents_on_user_id"
   end

@@ -4,8 +4,17 @@ class Rent < ApplicationRecord
 
   validates :start_date, :end_date, presence: true
 
-  validate :end_date_after_start_date
-  validate :rent_too_long
+  validate :end_date_after_start_date, :rent_too_long
+
+  def total_days
+    check_in = Date.parse(start_date.to_s)
+    check_out = Date.parse(end_date.to_s)
+    (check_out - check_in).to_i
+  end
+
+  def total_price
+    total_days * galaxy.price
+  end
 
   private
 
@@ -24,7 +33,6 @@ class Rent < ApplicationRecord
 
     if end_date > start_date + 30.days
       errors.add(:end_date, "must be less than 31 days from start date.")
-
     end
   end
 end
