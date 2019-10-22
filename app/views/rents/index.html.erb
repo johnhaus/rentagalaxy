@@ -6,8 +6,8 @@
       <% @rents.each do |rent| %>
         <p>Galaxy: <%= rent.galaxy.name %></p>
         <%= image_tag('homegalaxy.jpg', style:"width: 100%; max-width:100px") %>
-        <p>Start Date: <%= rent.start_date.strftime("%b %d, %Y") %></p>
-        <p>End Date: <%= rent.end_date.strftime("%b %d, %Y") %></p>
+        <p>Check In: <%= rent.start_date.strftime("%b %d, %Y") %></p>
+        <p>Check Out: <%= rent.end_date.strftime("%b %d, %Y") %></p>
         <%= link_to "Details", rent_path(rent), class: "btn btn-ghost" %>
         <%= link_to "Edit", edit_rent_path(rent), class: "btn btn-ghost" %>
       <% end %>
