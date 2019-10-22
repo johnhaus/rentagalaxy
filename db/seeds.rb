@@ -14,7 +14,8 @@ puts 'Creating galaxies...'
 9.times do
   galaxy = Galaxy.new(
   name: Faker::Space.unique.galaxy,
-  description: Faker::Lorem.paragraph(sentence_count: 3),
+  headline: Faker::Lorem.unique.sentence(word_count: 7),
+  description: Faker::Lorem.paragraph(sentence_count: (rand 7..12)),
   price: Faker::Number.within(range: 10000..100000),
   owner: Faker::Internet.unique.username
   )
@@ -22,4 +23,3 @@ puts 'Creating galaxies...'
 end
 
 puts 'Finished!'
-

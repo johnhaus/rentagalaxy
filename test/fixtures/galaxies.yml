@@ -2,37 +2,44 @@
 
 milky_way:
   name: "Milky Way"
-  description: "Laboriosam deleniti velit."
+  headline: Alias a dicta quod similique ut rerum.
+  description: "Sit dolorem perspiciatis. Hic eveniet aut. Quia repellendus repellat. Explicabo et corrupti. Sed et non. Qui totam occaecati. Enim blanditiis qui. Dolorem rerum aut."
   price: "68071"
   owner: "clemente_oconner"
 blackeye:
   name: "Blackeye"
-  description: "Tempore voluptates adipisci."
+  headline: Quia saepe consectetur repellendus odit atque.
+  description: "Enim maiores amet. Ducimus suscipit sed. Consequuntur aut totam. Qui ea cum. Alias vel enim."
   price: "50930"
   owner: "lashawnda.hand"
 pinwheel:
   name: "Pinwheel"
-  description: "Ratione suscipit similique."
+  headline: Alias a dicta quod similique ut rerum.
+  description: "Exercitationem commodi ea. Inventore quaerat quae. Cum consequuntur officia. Neque adipisci fuga. Quod sit laboriosam."
   price: "21123"
   owner: "willian"
 hoags_object:
   name: "Hoags Object"
-  description: "Temporibus veritatis cum."
+  headline: Autem fugiat alias laborum omnis sit consequatur.
+  description: "Illo possimus aliquam. Quis deserunt corrupti. Possimus excepturi veritatis. Tenetur amet dolores. Iure ab sunt. Quis qui est. Et blanditiis omnis. Velit molestiae sit. Optio tenetur quia."
   price: "87549"
   owner: "byron"
 messier_83:
   name: "Messier 83"
-  description: "Sapiente libero aut."
+  headline: Autem fugiat alias laborum omnis sit consequatur.
+  description: "Soluta consectetur natus. Architecto qui a. Maiores culpa iste. Ut consequatur voluptate. Ut corrupti molestiae. Iure molestias amet."
   price: "92018"
   owner: "ethyl"
 andromeda:
   name: "Andromeda"
-  description: "Quidem ipsam mollitia."
+  headline: Debitis quas dolores corrupti iste a sed.
+  description: "Voluptatibus occaecati aliquid. Quis sit a. Sit eius quas. Non sit consequatur. Voluptatem eum autem. Omnis sed sit."
   price: "21423"
   owner: "emmett"
 whirlpool:
   name: "Whirlpool"
-  description: "Nisi ut est."
+  headline: Illum id cum ullam voluptates architecto numquam.
+  description: "At in nihil. Iure tenetur nisi. Quaerat alias quo. Molestiae aspernatur omnis. Est quaerat qui."
   price: "67321"
   owner: "tommy"
 
@@ -41,7 +48,8 @@ whirlpool:
 # <% 8.times do |i| %>
 # galaxy_<%= i %>:
 #   name: <%= Faker::Space.unique.galaxy %>
-#   description: <%= Faker::Lorem.paragraph(sentence_count: 3) %>
+#   headline: <%= Faker::Lorem.unique.sentence(word_count: 6) %>,
+#   description: <%= Faker::Lorem.paragraph(sentence_count: (rand 7..12)) %>
 #   price: <%= Faker::Number.within(range: 10000..100000) %>
 #   owner: <%= Faker::Internet.unique.username %>
 # <% end %>

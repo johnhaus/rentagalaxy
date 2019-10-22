@@ -11,7 +11,8 @@ class GalaxiesTest < ApplicationSystemTestCase
     visit galaxies_url
     assert_selector "h1", text: "All Galaxies"
     click_link('Details', match: :prefer_exact)
-    assert_selector "h2", text: "Take a look at this great location"
+    assert_selector "h2"
+    assert_selector "p", text: "Daily Rate"
   end
 
   test "lets a signed in user view their rentals" do
